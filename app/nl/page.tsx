@@ -789,6 +789,7 @@ export default function NlHomePage() {
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Neem contact met ons op via WhatsApp"
       >
         <Icon name="whatsapp" className="icon" />
       </a>

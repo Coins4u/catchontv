@@ -789,6 +789,7 @@ export default function ItHomePage() {
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Contattaci su WhatsApp"
       >
         <Icon name="whatsapp" className="icon" />
       </a>

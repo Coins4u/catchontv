@@ -30,25 +30,6 @@ export function useCatchonTVUI() {
       });
     });
 
-    // #region agent log
-    fetch("http://127.0.0.1:7244/ingest/fb6042d8-eb4c-4fe4-bdbd-72d297828b57", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        id: `log_${Date.now()}_useCatchonTVUI_buttons`,
-        runId: "initial",
-        hypothesisId: "H2",
-        location: "app/hooks/useCatchonTVUI.ts:selectors",
-        message: "Collected pricing/cta buttons",
-        data: {
-          buttonCount: allButtons.length,
-          selectorCount: selectors.length,
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
-
     allButtons.forEach((anchor, index) => {
       const url = PRICING_URLS[index];
       if (!url) return;
@@ -111,28 +92,6 @@ export function useCatchonTVUI() {
       toggleSwitch.addEventListener("click", handleToggleSwitchClick);
       standardLabel?.addEventListener("click", handleStandardClick);
       premiumLabel?.addEventListener("click", handlePremiumClick);
-
-      // #region agent log
-      fetch("http://127.0.0.1:7244/ingest/fb6042d8-eb4c-4fe4-bdbd-72d297828b57", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          id: `log_${Date.now()}_useCatchonTVUI_toggle`,
-          runId: "initial",
-          hypothesisId: "H2",
-          location: "app/hooks/useCatchonTVUI.ts:toggle",
-          message: "Initialized pricing toggle handlers",
-          data: {
-            hasToggleSwitch: !!toggleSwitch,
-            hasStandardLabel: !!standardLabel,
-            hasPremiumLabel: !!premiumLabel,
-            hasStandardContainer: !!standardContainer,
-            hasPremiumContainer: !!premiumContainer,
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
     }
 
     // Smooth scroll for internal anchors
@@ -151,24 +110,6 @@ export function useCatchonTVUI() {
         anchorHandlers.push([anchor, handler]);
       });
 
-    // #region agent log
-    fetch("http://127.0.0.1:7244/ingest/fb6042d8-eb4c-4fe4-bdbd-72d297828b57", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        id: `log_${Date.now()}_useCatchonTVUI_anchors`,
-        runId: "initial",
-        hypothesisId: "H2",
-        location: "app/hooks/useCatchonTVUI.ts:anchors",
-        message: "Registered smooth-scroll anchor handlers",
-        data: {
-          handlerCount: anchorHandlers.length,
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
-
     return () => {
       if (toggleSwitch && standardContainer && premiumContainer) {
         toggleSwitch.removeEventListener("click", handleToggleSwitchClick);
@@ -179,27 +120,6 @@ export function useCatchonTVUI() {
       anchorHandlers.forEach(([a, handler]) =>
         a.removeEventListener("click", handler),
       );
-
-      // #region agent log
-      fetch("http://127.0.0.1:7244/ingest/fb6042d8-eb4c-4fe4-bdbd-72d297828b57", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          id: `log_${Date.now()}_useCatchonTVUI_cleanup`,
-          runId: "initial",
-          hypothesisId: "H2",
-          location: "app/hooks/useCatchonTVUI.ts:cleanup",
-          message: "Cleaned up pricing toggle and anchor handlers",
-          data: {
-            handlerCount: anchorHandlers.length,
-            hadToggleSwitch: !!toggleSwitch,
-            hadStandardContainer: !!standardContainer,
-            hadPremiumContainer: !!premiumContainer,
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
     };
   }, []);
 }

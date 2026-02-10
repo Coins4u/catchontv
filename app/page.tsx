@@ -4,7 +4,6 @@ import Icon from "./components/Icon";
 import CatchonTVUIClient from "./components/CatchonTVUIClient";
 import MobileMenuToggle from "./components/MobileMenuToggle";
 import HeroStats from "./components/HeroStats";
-import { logDebug } from "./debug-logger";
 
 const GRID_SIZES =
   "(max-width: 900px) 50vw, (max-width: 1200px) 25vw, 280px";
@@ -13,17 +12,6 @@ const POSTER_SIZES =
 const PAYMENT_SIZES = "(max-width: 768px) 70vw, 320px";
 
 export default function Home() {
-  // #region agent log
-  logDebug({
-    id: `log_${Date.now()}_Home_render`,
-    runId: "initial",
-    hypothesisId: "H3",
-    location: "app/page.tsx:Home",
-    message: "Rendered Home server component",
-    data: {},
-  });
-  // #endregion
-
   return (
     <>
       <CatchonTVUIClient />
@@ -839,6 +827,7 @@ export default function Home() {
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Contact us on WhatsApp"
       >
         <Icon name="whatsapp" className="icon" />
       </a>

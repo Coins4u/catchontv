@@ -796,6 +796,7 @@ export default function DeHomePage() {
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Kontaktieren Sie uns auf WhatsApp"
       >
         <Icon name="whatsapp" className="icon" />
       </a>

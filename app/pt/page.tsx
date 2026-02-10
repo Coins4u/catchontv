@@ -789,6 +789,7 @@ export default function PtHomePage() {
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Contacte-nos no WhatsApp"
       >
         <Icon name="whatsapp" className="icon" />
       </a>

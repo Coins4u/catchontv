@@ -66,49 +66,9 @@ export default function CountUp({
       if (progress < 1) {
         requestAnimationFrame(updateCount);
       } else {
-        // #region agent log
-        fetch("http://127.0.0.1:7244/ingest/fb6042d8-eb4c-4fe4-bdbd-72d297828b57", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            id: `log_${Date.now()}_CountUp_complete`,
-            runId: "initial",
-            hypothesisId: "H1",
-            location: "app/components/CountUp.tsx:updateCount",
-            message: "CountUp animation completed",
-            data: {
-              end,
-              duration,
-              finalValue: end,
-            },
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-        // #endregion
         setCount(end);
       }
     };
-
-    // #region agent log
-    fetch("http://127.0.0.1:7244/ingest/fb6042d8-eb4c-4fe4-bdbd-72d297828b57", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        id: `log_${Date.now()}_CountUp_start`,
-        runId: "initial",
-        hypothesisId: "H1",
-        location: "app/components/CountUp.tsx:animate",
-        message: "CountUp animation started",
-        data: {
-          start,
-          end,
-          duration,
-          difference,
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
 
     requestAnimationFrame(updateCount);
   };
