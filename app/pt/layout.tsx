@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    url: "https://catchontvapp.com/pt/",
     title: "Catchon TV IPTV Portugal | Melhor IPTV em Portugal",
     description:
       "Catchon TV (catch on iptv): IPTV Portugal 4K, playlists M3U e listas estáveis.",
