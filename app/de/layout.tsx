@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    url: "https://catchontvapp.com/de/",
     title: "Catchon TV IPTV – bester IPTV Anbieter Deutschland",
     description:
       "Catchon TV (catch on tv) ist ein deutscher IPTV Anbieter mit 4K, Anti‑Freeze und IPTV Streams ohne Pufferung.",
