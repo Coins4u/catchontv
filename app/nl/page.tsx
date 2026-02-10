@@ -604,19 +604,19 @@ export default function NlHomePage() {
               </div>
               <div className="logo-container">
                 {[
-                  "Group_2147224066.webp",
-                  "Group_2147224067.webp",
-                  "h.webp",
-                  "imabge.webp",
-                  "image.webp",
-                  "imfage.webp",
-                  "j.webp",
-                  "k.webp",
-                  "Layer_1.webp",
-                  "o.webp",
-                  "t.webp",
-                  "u.webp",
-                  "v.webp",
+                  "Group_2147224066.png",
+                  "Group_2147224067.png",
+                  "h.png",
+                  "imabge.png",
+                  "image.png",
+                  "imfage.png",
+                  "j.png",
+                  "k.png",
+                  "Layer_1.png",
+                  "o.png",
+                  "t.png",
+                  "u.png",
+                  "v.png",
                 ].map((logo, idx) => (
                   <Image
                     key={idx}
