@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    url: "https://catchontvapp.com/fr/",
     title: "Catchon TV IPTV | Meilleur abonnement IPTV France",
     description:
       "Catchon TV (catch on tv) : abonnement IPTV premium, 4K, anti‑coupure et chaînes françaises.",
