@@ -1,11 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import Icon from "../components/Icon";
-const CatchonTVUIClient = dynamic(
-  () => import("../components/CatchonTVUIClient"),
-  { ssr: false },
-);
+import CatchonTVUIClient from "../components/CatchonTVUIClient";
 import MobileMenuToggle from "../components/MobileMenuToggle";
 import HeroStats from "../components/HeroStats";
 
