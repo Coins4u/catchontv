@@ -39,7 +39,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    url: "https://catchontvapp.com/",
     title: "Catchon TV IPTV | Best IPTV Service 2026",
     description:
       "Catchon TV (catchon tv) is a premium IPTV provider with 4K live TV streaming, anti-freeze IPTV, and no buffering IPTV streams.",
