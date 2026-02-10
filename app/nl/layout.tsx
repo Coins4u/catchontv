@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    url: "https://catchontvapp.com/nl/",
     title: "Catchon TV IPTV Nederland | Beste IPTV kopen",
     description:
       "Catchon TV (catch on iptv): Nederlandse IPTV met abonnement, 4K en M3U lijsten.",
