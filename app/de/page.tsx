@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Icon from "../components/Icon";
-import CatchonTVUIClient from "../components/CatchonTVUIClient";
+const CatchonTVUIClient = dynamic(
+  () => import("../components/CatchonTVUIClient"),
+  { ssr: false },
+);
 import MobileMenuToggle from "../components/MobileMenuToggle";
 import HeroStats from "../components/HeroStats";
 
@@ -10,6 +14,8 @@ const GRID_SIZES =
 const POSTER_SIZES =
   "(max-width: 700px) 50vw, (max-width: 1200px) 25vw, 240px";
 const PAYMENT_SIZES = "(max-width: 768px) 70vw, 320px";
+const BLUR_DATA_URL =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/6Xc9E0AAAAASUVORK5CYII=";
 
 export default function DeHomePage() {
   return (
@@ -97,8 +103,9 @@ export default function DeHomePage() {
                   alt="Catchon TV streaming preview"
                   width={600}
                   height={400}
-                  sizes="(max-width: 768px) 100vw, 600px"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
+                  fetchPriority="high"
                 />
                 <div className="hero-card-overlay">
                   <span className="hero-pill">
@@ -149,6 +156,9 @@ export default function DeHomePage() {
                     width={600}
                     height={400}
                     sizes="(max-width: 768px) 100vw, 600px"
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL={BLUR_DATA_URL}
                   />
                   <div className="sports-badge">Live Now</div>
                 </div>
@@ -275,6 +285,9 @@ export default function DeHomePage() {
                                       fill
                                       sizes={POSTER_SIZES}
                                       className="ImageType_149741 cover poster__cover_684939"
+                                      loading="lazy"
+                                      placeholder="blur"
+                                      blurDataURL={BLUR_DATA_URL}
                                     />
                                   </div>
                                 </div>
@@ -435,6 +448,9 @@ export default function DeHomePage() {
                     height={60}
                     sizes={PAYMENT_SIZES}
                     className="payment-methods-img"
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL={BLUR_DATA_URL}
                   />
                 </div>
               ))}
@@ -504,6 +520,9 @@ export default function DeHomePage() {
                     height={60}
                     sizes={PAYMENT_SIZES}
                     className="payment-methods-img"
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL={BLUR_DATA_URL}
                   />
                 </div>
               ))}
@@ -632,6 +651,9 @@ export default function DeHomePage() {
                     width={80}
                     height={80}
                     className="device-logo"
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL={BLUR_DATA_URL}
                   />
                 ))}
               </div>
@@ -747,6 +769,9 @@ export default function DeHomePage() {
                   width={160}
                   height={40}
                   sizes="160px"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={BLUR_DATA_URL}
                 />
               </a>
               <p className="footer-desc">

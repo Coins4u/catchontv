@@ -444,7 +444,7 @@ h2.section-title {
     padding: 4px 10px;
     border-radius: 999px;
     background: red;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 700;
     font-size: 0.85rem;
     box-shadow: 0 10px 20px rgba(17, 24, 39, 0.12);
@@ -609,7 +609,7 @@ h2.section-title {
     gap: 8px;
     padding: 8px 12px;
     border-radius: 999px;
-    background: #ffffff;
+    background: #d8d7d7;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     font-weight: 700;
@@ -620,12 +620,12 @@ h2.section-title {
 
 .movies-pill.active {
     background: var(--primary-color);
-    color: #ffffff;
+    color: #000000;
     border-color: var(--primary-color);
 }
 
 .movies-pill.active .icon {
-    color: #ffffff;
+    color: #000000;
 }
 
 .movies-pill .icon {
