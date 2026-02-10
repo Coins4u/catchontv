@@ -752,7 +752,7 @@ h2.section-title {
 .toggle-label {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--text-gray);
+    color: black;
     cursor: pointer;
 }
 
@@ -814,7 +814,7 @@ h2.section-title {
 }
 
 .pricing-alert {
-    background: #faa8e11a;
+    background: rgba(250, 203, 236, 0.103);
     border: 1px solid rgba(255, 0, 179, 0.3);
     border-radius: 12px;
     padding: 20px;
