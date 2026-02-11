@@ -7,7 +7,7 @@ import MobileMenuToggle from "../components/MobileMenuToggle";
 export default function PrivacyPage() {
   return (
     <>
-      <CatchonTVUIClient />
+      <CatchonTVUIClient currency="usd" />
       <header className="header">
         <div className="container">
           <div className="nav-wrapper">

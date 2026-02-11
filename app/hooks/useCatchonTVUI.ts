@@ -2,7 +2,8 @@
 
 import { useEffect } from "react";
 
-const PRICING_URLS = [
+/** EUR pricing links (de, fr, it, nl, pt) */
+const PRICING_URLS_EUR = [
   "https://aurapresets.shop/bundle/VIP-500.html",
   "https://aurapresets.shop/bundle/Master-700.html",
   "https://aurapresets.shop/bundle/Pro-1200.html",
@@ -13,7 +14,20 @@ const PRICING_URLS = [
   "https://aurapresets.shop/bundle/Ultimate-2500.html",
 ];
 
-export function useCatchonTVUI() {
+/** USD pricing links (en) – replace with actual USD checkout URLs if needed */
+const PRICING_URLS_USD = [
+  "https://flowstate-media.app/code/Standard-Framework-Access.html",
+  "https://flowstate-media.app/code/App-Maintenance.html",
+  "https://flowstate-media.app/code/Software-Support.html",
+  "https://flowstate-media.app/code/Enterprise-Source-Code.html",
+  "https://flowstate-media.app/code/Premium-White-Label.html",
+  "https://flowstate-media.app/code/Elite-Full-Stack-Maintenance-Bundle.html",
+  "https://flowstate-media.app/code/Pro-Stream-Source-Code.html",
+  "https://flowstate-media.app/code/Ultimate-Enterprise.html",
+]; 
+
+
+export function useCatchonTVUI(currency: "usd" | "eur" = "eur") {
   useEffect(() => {
     // Pricing links mapping by DOM order
     const selectors = [
@@ -30,8 +44,9 @@ export function useCatchonTVUI() {
       });
     });
 
+    const pricingUrls = currency === "usd" ? PRICING_URLS_USD : PRICING_URLS_EUR;
     allButtons.forEach((anchor, index) => {
-      const url = PRICING_URLS[index];
+      const url = pricingUrls[index];
       if (!url) return;
       anchor.href = url;
       anchor.rel = "noopener noreferrer";
@@ -121,5 +136,5 @@ export function useCatchonTVUI() {
         a.removeEventListener("click", handler),
       );
     };
-  }, []);
+  }, [currency]);
 }

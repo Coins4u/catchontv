@@ -9,7 +9,7 @@ import MobileMenuToggle from "../../components/MobileMenuToggle";
 export default function ItGuidePage() {
   return (
     <>
-      <CatchonTVUIClient />
+      <CatchonTVUIClient currency="eur" />
       <header className="header">
         <div className="container">
           <div className="nav-wrapper">

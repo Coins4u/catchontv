@@ -26,7 +26,7 @@ export default function ItContactPage() {
 
   return (
     <>
-      <CatchonTVUIClient />
+      <CatchonTVUIClient currency="eur" />
       <header className="header">
         <div className="container">
           <div className="nav-wrapper">

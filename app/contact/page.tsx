@@ -27,7 +27,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <CatchonTVUIClient />
+      <CatchonTVUIClient currency="usd" />
       <header className="header">
         <div className="container">
           <div className="nav-wrapper">

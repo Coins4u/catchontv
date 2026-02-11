@@ -7,7 +7,7 @@ import MobileMenuToggle from "../../components/MobileMenuToggle";
 export default function DeRefundPolicyPage() {
   return (
     <>
-      <CatchonTVUIClient />
+      <CatchonTVUIClient currency="eur" />
       <header className="header">
         <div className="container">
           <div className="nav-wrapper">

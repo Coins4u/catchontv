@@ -16,7 +16,7 @@ const BLUR_DATA_URL =
 export default function NlHomePage() {
   return (
     <>
-      <CatchonTVUIClient />
+      <CatchonTVUIClient currency="eur" />
       <header className="header">
         <div className="container">
           <div className="nav-wrapper">
