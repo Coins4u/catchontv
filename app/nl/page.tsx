@@ -806,7 +806,7 @@ export default function NlHomePage() {
       </footer>
 
       <a
-        href="https://wa.me/14302485823"
+        href="https://wa.me/17624385265"
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
