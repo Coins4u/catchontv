@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 /** EUR pricing links (de, fr, it, nl, pt) */
-const PRICING_URLS = [
+const PRICING_URLS_EUR = [
   "https://visualperfection.click/product/basic.html",
   "https://visualperfection.click//product/Startup.html",
   "https://visualperfection.click/product/elite.html",
