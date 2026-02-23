@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - Catchon TV</title>
+  <meta name="description" content="Kontaktieren Sie das Catchon TV Support-Team für Fragen oder Unterstützung.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
+
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="../index.html" class="logo"><img src="../../img/logo.png" alt="Catchon TV Logo"></a>
+        <div class="mobile-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-links">
+          <a href="../index.html" class="nav-link">Startseite</a>
+          <a href="../index.html#sports" class="nav-link">Sport</a>
+          <a href="../index.html#movies" class="nav-link">Filme</a>
+          <a href="../index.html#pricing" class="nav-link">Preise</a>
+          <a href="../guide/index.html" class="nav-link">Installationsanleitung</a>
+          <a href="../contact/index.html" class="nav-link active">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+<main class="contact-section">
+  <div class="container">
+    <div class="contact-hero">
+      <h2 class="contact-title">Kontaktieren Sie uns</h2>
+      <p class="contact-subtitle">Haben Sie Fragen oder benötigen Sie Hilfe? Unser dediziertes
+        Support-Team
+        ist rund um die Uhr für Sie da.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-form">
+        <form id="contactForm" method="post" action="process_form.php">
+        <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-control" required placeholder="Ihr Name">
+        </div>
+        <div class="form-group">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" class="form-control" required placeholder="Ihre E-Mail">
+        </div>
+        <div class="form-group">
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message" class="form-control" rows="5" required placeholder="Wie können wir helfen?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary contact-submit">Nachricht senden</button>
+        <div id="responseMessage" style="margin-top: 15px; text-align: center;"></div>
+        </form>
+      </div>
+      <div class="contact-aside">
+        <div class="contact-panel">
+          <div class="contact-panel-icon"><i class="fas fa-bolt"></i></div>
+          <div class="contact-panel-body">
+            <h3 class="contact-panel-title">Schnelle Antwort</h3>
+            <p class="contact-panel-text">Wir bemühen uns, alle Anfragen innerhalb von <strong>1-2
+        Stunden</strong> zu beantworten.
+        Bitte überprüfen Sie Ihren Spam-Ordner, falls Sie keine Antwort sehen.</p>
+          </div>
+        </div>
+        <div class="contact-panel">
+          <div class="contact-panel-icon"><i class="fas fa-book-open"></i></div>
+          <div class="contact-panel-body">
+            <h3 class="contact-panel-title">Installationsanleitungen</h3>
+            <p class="contact-panel-text">Brauchen Sie Hilfe bei der Einrichtung? Schauen Sie sich unsere
+        detaillierten <a href="../guide/index.html" class="contact-card-link">Installationsanleitungen</a>
+        für Schritt-für-Schritt-Anweisungen an.</p>
+          </div>
+        </div>
+        <div class="contact-panel">
+          <div class="contact-panel-icon"><i class="fas fa-question-circle"></i></div>
+          <div class="contact-panel-body">
+            <h3 class="contact-panel-title">FAQ</h3>
+            <p class="contact-panel-text">Finden Sie Antworten auf häufige Fragen zu Kanälen, Pufferung und
+        mehr in unserem <a href="../index.html#faq" class="contact-card-link">FAQ-Bereich</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo"><img src="../../img/logo.png" alt="Catchon TV Logo"></a>
+          <p class="footer-desc">Premium IPTV Subscription Service.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Schnelllinks</h3>
+          <ul>
+            <li><a href="../index.html">Startseite</a></li>
+            <li><a href="../index.html#pricing">Preise</a></li>
+            <li><a href="../guide/index.html">Installationsanleitung</a></li>
+            <li><a href="../contact/index.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Rechtliches</h3>
+          <ul>
+            <li><a href="../TermsConditions/index.html">AGB</a></li>
+            <li><a href="../privacy/index.html">Datenschutzerklärung</a></li>
+            <li><a href="../RefundPolicy/index.html">Rückerstattung</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Catchon TV. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../js/main.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const form = this;
+      const formData = new FormData(form);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const responseMsg = document.getElementById('responseMessage');
+
+      // Disable button and show loading state
+      const originalBtnText = submitBtn.innerText;
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Senden...';
+      responseMsg.style.display = 'none';
+
+      fetch('process_form.php', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.text())
+        .then(data => {
+          responseMsg.innerText = data;
+          responseMsg.style.display = 'block';
+
+          if (data.includes('Thank you')) {
+            responseMsg.style.color = '#4CAF50'; // Green for success
+            form.reset();
+          } else {
+            responseMsg.style.color = '#FF5252'; // Red for error
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          responseMsg.innerText = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.';
+          responseMsg.style.display = 'block';
+          responseMsg.style.color = '#FF5252';
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerText = originalBtnText;
+        });
+    });
+  </script>
+</body>
+
+</html>

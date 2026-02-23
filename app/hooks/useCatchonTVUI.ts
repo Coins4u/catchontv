@@ -4,14 +4,16 @@ import { useEffect } from "react";
 
 /** EUR pricing links (de, fr, it, nl, pt) */
 const PRICING_URLS_EUR = [
-  "https://aurapresets.shop/bundle/VIP-500.html",
-  "https://aurapresets.shop/bundle/Master-700.html",
-  "https://aurapresets.shop/bundle/Pro-1200.html",
-  "https://aurapresets.shop/bundle/Mega-2500.html",
-  "https://aurapresets.shop/bundle/Starter-500.html",
-  "https://aurapresets.shop/bundle/Elite-700.html",
-  "https://aurapresets.shop/bundle/Pro-Max-1200.html",
-  "https://aurapresets.shop/bundle/Ultimate-2500.html",
+  "https://visualperfection.click/product/basic.html",
+  "https://visualperfection.click//product/Startup.html",
+  "https://visualperfection.click/product/elite.html",
+  "https://visualperfection.click/product/ultimate.html",
+  "https://visualperfection.click/product/starter.html",
+  "https://visualperfection.click/product/growth.html",
+  "https://visualperfection.click/product/elitepro.html",
+  "https://visualperfection.click/product/business.html",
+
+
 ];
 
 /** USD pricing links (en) – replace with actual USD checkout URLs if needed */
@@ -24,7 +26,7 @@ const PRICING_URLS_USD = [
   "https://flowstate-media.app/code/Elite-Full-Stack-Maintenance-Bundle.html",
   "https://flowstate-media.app/code/Pro-Stream-Source-Code.html",
   "https://flowstate-media.app/code/Ultimate-Enterprise.html",
-]; 
+];
 
 
 export function useCatchonTVUI(currency: "usd" | "eur" = "eur") {

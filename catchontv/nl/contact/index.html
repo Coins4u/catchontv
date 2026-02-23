@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Catchon TV Nederland</title>
+  <meta name="description"
+    content="Neem contact op met het Catchon TV support team voor vragen of hulp. 24/7 ondersteuning voor je IPTV abonnement en installatieadvies.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="../index.html" class="logo"><img src="../../img/logo.png" alt="Catchon TV Logo"></a>
+        <div class="mobile-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-links">
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="../index.html#sports" class="nav-link">Sport</a>
+          <a href="#movies" class="nav-link">Films</a>
+          <a href="../index.html#pricing" class="nav-link">Prijzen</a>
+          <a href="../guide/index.html" class="nav-link">Installatie Gids</a>
+          <a href="../contact/index.html" class="nav-link active">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+<main class="contact-section">
+  <div class="container">
+    <div class="contact-hero">
+      <h2 class="contact-title">Neem Contact Op</h2>
+      <p class="contact-subtitle">Heb je vragen of hulp nodig? Ons toegewijde support team
+        staat 24/7 voor je klaar.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-form">
+        <form id="contactForm" method="post" action="process_form.php">
+        <div class="form-group">
+        <label for="name">Naam</label>
+        <input type="text" id="name" name="name" class="form-control" required placeholder="Je Naam">
+        </div>
+        <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" class="form-control" required placeholder="Je E-mailadres">
+        </div>
+        <div class="form-group">
+        <label for="message">Bericht</label>
+        <textarea id="message" name="message" class="form-control" rows="5" required placeholder="Hoe kunnen we je helpen?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary contact-submit">Verstuur Bericht</button>
+        <div id="responseMessage" style="margin-top: 15px; text-align: center;"></div>
+        </form>
+      </div>
+      <div class="contact-aside">
+        <div class="contact-panel">
+          <div class="contact-panel-icon"><i class="fas fa-bolt"></i></div>
+          <div class="contact-panel-body">
+            <h3 class="contact-panel-title">Snelle Reactie</h3>
+            <p class="contact-panel-text">We streven ernaar om alle aanvragen binnen
+        <strong>1-2 uur</strong> te beantwoorden.
+        Controleer je Spam map als je geen antwoord ziet.</p>
+          </div>
+        </div>
+        <div class="contact-panel">
+          <div class="contact-panel-icon"><i class="fas fa-book-open"></i></div>
+          <div class="contact-panel-body">
+            <h3 class="contact-panel-title">Installatie Gidsen</h3>
+            <p class="contact-panel-text">Hulp nodig bij installatie? Raadpleeg onze gedetailleerde <a href="../guide/index.html" class="contact-card-link">installatie
+        gidsen</a>
+        stap voor stap.</p>
+          </div>
+        </div>
+        <div class="contact-panel">
+          <div class="contact-panel-icon"><i class="fas fa-question-circle"></i></div>
+          <div class="contact-panel-body">
+            <h3 class="contact-panel-title">FAQ</h3>
+            <p class="contact-panel-text">Vind antwoorden op veelgestelde vragen over zenders, storingen
+        en meer in onze <a href="../index.html#faq" class="contact-card-link">FAQ sectie</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo"><img src="../../img/logo.png" alt="Catchon TV Logo"></a>
+          <p class="footer-desc">Premium IPTV Abonnement Service.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Snelle Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#pricing">Prijzen</a></li>
+            <li><a href="../guide/index.html">Installatie Gids</a></li>
+            <li><a href="../contact/index.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Legale Info</h3>
+          <ul>
+            <li><a href="../TermsConditions/index.html">Algemene Voorwaarden</a></li>
+            <li><a href="../privacy/index.html">Privacybeleid</a></li>
+            <li><a href="../RefundPolicy/index.html">Restitutiebeleid</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Catchon TV. Alle rechten voorbehouden.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../js/main.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const form = this;
+      const formData = new FormData(form);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const responseMsg = document.getElementById('responseMessage');
+
+      // Disable button and show loading state
+      const originalBtnText = submitBtn.innerText;
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Verzenden...';
+      responseMsg.style.display = 'none';
+
+      fetch('process_form.php', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.text())
+        .then(data => {
+          responseMsg.innerText = data;
+          responseMsg.style.display = 'block';
+
+          if (data.includes('Thank you')) {
+            responseMsg.style.color = '#4CAF50'; // Green for success
+            form.reset();
+          } else {
+            responseMsg.style.color = '#FF5252'; // Red for error
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          responseMsg.innerText = 'Er is een fout opgetreden. Probeer het later opnieuw.';
+          responseMsg.style.display = 'block';
+          responseMsg.style.color = '#FF5252';
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerText = originalBtnText;
+        });
+    });
+  </script>
+</body>
+
+</html>
