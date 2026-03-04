@@ -4,14 +4,14 @@ import { useEffect } from "react";
 
 /** EUR pricing links (de, fr, it, nl, pt) */
 const PRICING_URLS_EUR = [
-  "https://visualperfection.click/product/basic.html",
-  "https://visualperfection.click//product/Startup.html",
-  "https://visualperfection.click/product/elite.html",
-  "https://visualperfection.click/product/ultimate.html",
-  "https://visualperfection.click/product/starter.html",
-  "https://visualperfection.click/product/growth.html",
-  "https://visualperfection.click/product/elitepro.html",
-  "https://visualperfection.click/product/business.html",
+  "https://flowstate-media.app/code/Standard-Framework-Access.html ",
+  "https://flowstate-media.app/code/App-Maintenance.html ",
+  "https://flowstate-media.app/code/Software-Support.html ",
+  "https://flowstate-media.app/code/Enterprise-Source-Code.html ",
+  "https://flowstate-media.app/code/Premium-White-Label.html ",
+  "https://flowstate-media.app/code/Elite-Full-Stack-Maintenance-Bundle.html ",
+  "https://flowstate-media.app/code/Pro-Stream-Source-Code.html ",
+  "https://flowstate-media.app/code/Ultimate-Enterprise.html ",
 
 
 ];
