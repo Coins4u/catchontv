@@ -4,14 +4,14 @@ import { useEffect } from "react";
 
 /** EUR pricing links (de, fr, it, nl, pt) */
 const PRICING_URLS_EUR = [
-  "https://flowstate-media.app/code/Standard-Framework-Access.html ",
-  "https://flowstate-media.app/code/App-Maintenance.html ",
-  "https://flowstate-media.app/code/Software-Support.html ",
-  "https://flowstate-media.app/code/Enterprise-Source-Code.html ",
-  "https://flowstate-media.app/code/Premium-White-Label.html ",
-  "https://flowstate-media.app/code/Elite-Full-Stack-Maintenance-Bundle.html ",
-  "https://flowstate-media.app/code/Pro-Stream-Source-Code.html ",
-  "https://flowstate-media.app/code/Ultimate-Enterprise.html ",
+  "https://designflare.de/pack/firstpack.html ",
+  "https://designflare.de/pack/secondpack.html ",
+  "https://designflare.de/pack/thirdpack.html ",
+  "https://designflare.de/pack/forthpack.html ",
+  "https://designflare.de/pack/premiumfirstpack.html ",
+  "https://designflare.de/pack/premiumsecondpack.html ",
+  "https://designflare.de/pack/premiumthirdpack.html ",
+  "https://designflare.de/pack/premiumforthpack.html ",
 
 ];
 
