@@ -376,16 +376,16 @@ export default function FrHomePage() {
 
             <div id="standard-plans" className="pricing-container active">
               {[
-                { name: "1 Mois", price: "€14.59", period: "/Mois" },
+                { name: "1 Mois", price: "€14.32", period: "/Mois" },
                 {
                   name: "3 Mois",
-                  price: "€24.56",
+                  price: "€26.34",
                   period: "/3 Mois",
                   popular: true,
                   badge: "Meilleure Valeur",
                 },
-                { name: "6 Mois", price: "€34.78", period: "/6 Mois" },
-                { name: "12 Mois", price: "€49.99", period: "/An" },
+                { name: "6 Mois", price: "€36.78", period: "/6 Mois" },
+                { name: "12 Mois", price: "€48.98", period: "/An" },
               ].map((plan, idx) => (
                 <div
                   key={idx}
@@ -448,16 +448,16 @@ export default function FrHomePage() {
 
             <div id="premium-plans" className="pricing-container">
               {[
-                { name: "1 Mois Premium", price: "€25.86", period: "/Mois" },
+                { name: "1 Mois Premium", price: "€24.89", period: "/Mois" },
                 {
                   name: "3 Mois Premium",
-                  price: "€36.45",
+                  price: "€36.49",
                   period: "/3 Mois",
                   popular: true,
                   badge: "Top Choix",
                 },
-                { name: "6 Mois Premium", price: "€45.28", period: "/6 Mois" },
-                { name: "12 Mois Premium", price: "€67.98", period: "/An" },
+                { name: "6 Mois Premium", price: "€45.09", period: "/6 Mois" },
+                { name: "12 Mois Premium", price: "€68.24", period: "/An" },
               ].map((plan, idx) => (
                 <div
                   key={idx}

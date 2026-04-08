@@ -376,16 +376,16 @@ export default function NlHomePage() {
 
             <div id="standard-plans" className="pricing-container active">
               {[
-                { name: "1 Maand", price: "€14.59", period: "/maand" },
+                { name: "1 Maand", price: "€14.32", period: "/maand" },
                 {
                   name: "3 Maanden",
-                  price: "€24.56",
+                  price: "€26.34",
                   period: "/3 maanden",
                   popular: true,
                   badge: "Beste Waarde",
                 },
-                { name: "6 Maanden", price: "€34.78", period: "/6 maanden" },
-                { name: "12 Maanden", price: "€49.99", period: "/jaar" },
+                { name: "6 Maanden", price: "€36.78", period: "/6 maanden" },
+                { name: "12 Maanden", price: "€48.98", period: "/jaar" },
               ].map((plan, idx) => (
                 <div
                   key={idx}
@@ -448,16 +448,16 @@ export default function NlHomePage() {
 
             <div id="premium-plans" className="pricing-container">
               {[
-                { name: "1 Maand Premium", price: "€25.86", period: "/maand" },
+                { name: "1 Maand Premium", price: "€24.89", period: "/maand" },
                 {
                   name: "3 Maanden Premium",
-                  price: "€36.45",
+                  price: "€36.49",
                   period: "/3 maanden",
                   popular: true,
                   badge: "Top Keuze",
                 },
-                { name: "6 Maanden Premium", price: "€45.28", period: "/6 maanden" },
-                { name: "12 Maanden Premium", price: "€67.98", period: "/jaar" },
+                { name: "6 Maanden Premium", price: "€45.09", period: "/6 maanden" },
+                { name: "12 Maanden Premium", price: "€68.24", period: "/jaar" },
               ].map((plan, idx) => (
                 <div
                   key={idx}

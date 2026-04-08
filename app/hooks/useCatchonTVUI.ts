@@ -2,59 +2,10 @@
 
 import { useEffect } from "react";
 
-/** EUR pricing links (de, fr, it, nl, pt) */
-const PRICING_URLS_EUR = [
-  "https://visualperfection.click/product/basic.html",
-  "https://visualperfection.click//product/Startup.html",
-  "https://visualperfection.click/product/elite.html",
-  "https://visualperfection.click/product/ultimate.html",
-  "https://visualperfection.click/product/starter.html",
-  "https://visualperfection.click/product/growth.html",
-  "https://visualperfection.click/product/elitepro.html",
-  "https://visualperfection.click/product/business.html",
+/** Checkout links are managed in `lib/sellapp-config.ts` and sent via the order lead modal. */
 
-
-];
-
-/** USD pricing links (en) – replace with actual USD checkout URLs if needed */
-const PRICING_URLS_USD = [
-  "https://flowstate-media.app/code/Standard-Framework-Access.html",
-  "https://flowstate-media.app/code/App-Maintenance.html",
-  "https://flowstate-media.app/code/Software-Support.html",
-  "https://flowstate-media.app/code/Enterprise-Source-Code.html",
-  "https://flowstate-media.app/code/Premium-White-Label.html",
-  "https://flowstate-media.app/code/Elite-Full-Stack-Maintenance-Bundle.html",
-  "https://flowstate-media.app/code/Pro-Stream-Source-Code.html",
-  "https://flowstate-media.app/code/Ultimate-Enterprise.html",
-];
-
-
-export function useCatchonTVUI(currency: "usd" | "eur" = "eur") {
+export function useCatchonTVUI() {
   useEffect(() => {
-    // Pricing links mapping by DOM order
-    const selectors = [
-      ".pricing-card .btn",
-      ".pricing__card__cta a.button",
-      ".pricing__card__cta a",
-      ".pricing a.button",
-      'a[data-plan]',
-    ];
-    const allButtons: HTMLAnchorElement[] = [];
-    selectors.forEach((sel) => {
-      document.querySelectorAll<HTMLAnchorElement>(sel).forEach((el) => {
-        if (!allButtons.includes(el)) allButtons.push(el);
-      });
-    });
-
-    const pricingUrls = currency === "usd" ? PRICING_URLS_USD : PRICING_URLS_EUR;
-    allButtons.forEach((anchor, index) => {
-      const url = pricingUrls[index];
-      if (!url) return;
-      anchor.href = url;
-      anchor.rel = "noopener noreferrer";
-      anchor.referrerPolicy = "no-referrer";
-    });
-
     // Mobile menu toggle is now handled by MobileMenuToggle component
 
     // Pricing toggle logic
@@ -138,5 +89,5 @@ export function useCatchonTVUI(currency: "usd" | "eur" = "eur") {
         a.removeEventListener("click", handler),
       );
     };
-  }, [currency]);
+  }, []);
 }

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://catchontvapp.com/sitemap.xml
