@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   description:
     "Catchon TV (catch on tv) oferece IPTV Portugal 4K, playlists M3U e streaming estável. Opção legal e simples para Portugal.",
   alternates: {
-    canonical: "https://catchontvapp.com/pt/",
+    canonical: "https://catchontvapp.com/pt",
   },
   openGraph: {
     type: "website",
-    url: "https://catchontvapp.com/pt/",
+    url: "https://catchontvapp.com/pt",
     title: "Catchon TV IPTV Portugal | Melhor IPTV em Portugal",
     description:
       "Catchon TV (catchontv): IPTV Portugal 4K, playlists M3U e listas IPTV estáveis.",

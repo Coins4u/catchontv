@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   description:
     "Catchon TV (catch on tv) ist Ihr deutscher IPTV Anbieter: 4K, Anti‑Freeze, stabile IPTV Streams, Firestick & Kodi.",
   alternates: {
-    canonical: "https://catchontvapp.com/de/",
+    canonical: "https://catchontvapp.com/de",
   },
   openGraph: {
     type: "website",
-    url: "https://catchontvapp.com/de/",
+    url: "https://catchontvapp.com/de",
     title: "Catchon TV IPTV – bester IPTV Anbieter Deutschland",
     description:
       "Catchon TV (catchontv) bietet deutsches IPTV: 4K, Anti‑Freeze IPTV und IPTV Streams ohne Pufferung.",

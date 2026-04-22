@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   description:
     "Catchon TV (catch on tv) offre IPTV Italia 4K senza buffering, canali TV italiani, liste M3U aggiornate e IPTV Smarters Italia.",
   alternates: {
-    canonical: "https://catchontvapp.com/it/",
+    canonical: "https://catchontvapp.com/it",
   },
   openGraph: {
     type: "website",
-    url: "https://catchontvapp.com/it/",
+    url: "https://catchontvapp.com/it",
     title: "Catchon TV IPTV Italia | Miglior servizio IPTV",
     description:
       "Catchon TV (catchontv): abbonamenti IPTV, canali TV italiani, sport in 4K e streaming stabile senza buffering.",

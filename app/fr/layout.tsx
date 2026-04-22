@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   description:
     "Catchon TV (catch on tv) propose un abonnement IPTV premium en France : 4K, anti‑coupure, chaînes françaises et apps IPTV Smarters Pro.",
   alternates: {
-    canonical: "https://catchontvapp.com/fr/",
+    canonical: "https://catchontvapp.com/fr",
   },
   openGraph: {
     type: "website",
-    url: "https://catchontvapp.com/fr/",
+    url: "https://catchontvapp.com/fr",
     title: "Catchon TV IPTV | Meilleur abonnement IPTV France",
     description:
       "Catchon TV (catchontv) : abonnement IPTV premium, 4K, anti‑coupure, chaînes françaises et internationales.",

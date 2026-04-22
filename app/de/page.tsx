@@ -382,16 +382,16 @@ export default function DeHomePage() {
 
             <div id="standard-plans" className="pricing-container active">
               {[
-                { name: "1 Monat", price: "€14.32", period: "/Monat" },
+                { name: "1 Monat", price: "€13.45", period: "/Monat" },
                 {
                   name: "3 Monate",
-                  price: "€26.34",
+                  price: "€23.36",
                   period: "/3 Mon",
                   popular: true,
                   badge: "Bester Wert",
                 },
-                { name: "6 Monate", price: "€36.78", period: "/6 Mon" },
-                { name: "12 Monate", price: "€48.98", period: "/Jahr" },
+                { name: "6 Monate", price: "€35.97", period: "/6 Mon" },
+                { name: "12 Monate", price: "€49.13", period: "/Jahr" },
               ].map((plan, idx) => (
                 <div
                   key={idx}
@@ -454,16 +454,16 @@ export default function DeHomePage() {
 
             <div id="premium-plans" className="pricing-container">
               {[
-                { name: "1 Monat Premium", price: "€24.89", period: "/Monat" },
+                { name: "1 Monat Premium", price: "€24.23", period: "/Monat" },
                 {
                   name: "3 Monate Premium",
-                  price: "€36.49",
+                  price: "€33.54",
                   period: "/3 Mon",
                   popular: true,
                   badge: "Top Auswahl",
                 },
-                { name: "6 Monate Premium", price: "€45.09", period: "/6 Mon" },
-                { name: "12 Monate Premium", price: "€68.24", period: "/Jahr" },
+                { name: "6 Monate Premium", price: "€45.47", period: "/6 Mon" },
+                { name: "12 Monate Premium", price: "€66.62", period: "/Jahr" },
               ].map((plan, idx) => (
                 <div
                   key={idx}

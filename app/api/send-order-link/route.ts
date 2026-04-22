@@ -2,7 +2,10 @@ import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import {
   buildBuyerOrderEmailHtml,
+  buildBuyerOrderEmailText,
+  getBuyerEmailSubject,
   generateInvoiceRef,
+  resolveBuyerLocaleFromCountry,
 } from "../../../lib/buyer-order-email-html";
 
 type Body = {
@@ -90,8 +93,9 @@ export async function POST(request: Request) {
   const siteOrigin =
     process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://catchontvapp.com";
   const invoiceRef = generateInvoiceRef();
+  const locale = resolveBuyerLocaleFromCountry(country);
 
-  const buyerSubject = `Your order is ready — ${tierName} (${invoiceRef})`;
+  const buyerSubject = getBuyerEmailSubject(tierName, invoiceRef, locale);
   const buyerHtml = buildBuyerOrderEmailHtml({
     fullName,
     email,
@@ -101,23 +105,17 @@ export async function POST(request: Request) {
     priceDisplay: priceDisplay || "—",
     invoiceRef,
     siteOrigin,
+    locale,
   });
 
-  const buyerText = `Hello ${fullName},
-
-Thanks for choosing Catchon TV. Your secure payment link is ready.
-
-Invoice reference: ${invoiceRef}
-
-Open payment link: ${sellAppLink}
-
-Plan: ${tierName}${priceDisplay ? ` — ${priceDisplay}` : ""}
-
-After paying, check your Spam folder if you don't see our confirmation.
-
-If you didn't request this email, you can ignore it.
-
-— Catchon TV`;
+  const buyerText = buildBuyerOrderEmailText({
+    fullName,
+    tierName,
+    priceDisplay: priceDisplay || "—",
+    sellAppLink,
+    invoiceRef,
+    locale,
+  });
 
   const adminSubject = `NEW FORM FILLED: ${tierName} - ${fullName}`;
   const adminText = `A user has filled the order form.
