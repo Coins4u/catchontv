@@ -125,6 +125,19 @@ Country: ${country}
 Tier Selected: ${tierName}
 Status: Secure link has been sent to the buyer.`;
 
+  const isDev = process.env.NODE_ENV === "development";
+  const emailDryRun = isDev && process.env.ORDER_EMAIL_DRY_RUN === "true";
+
+  if (emailDryRun) {
+    console.info(
+      "[send-order-link] ORDER_EMAIL_DRY_RUN: skipping SMTP (dev only). Would send:\n" +
+        `  to buyer: ${email}\n` +
+        `  to admin: ${adminEmail}\n` +
+        `  subject: ${buyerSubject}`,
+    );
+    return NextResponse.json({ ok: true, dryRun: true });
+  }
+
   try {
     await Promise.all([
       transporter.sendMail({
@@ -143,8 +156,12 @@ Status: Secure link has been sent to the buyer.`;
     ]);
   } catch (err) {
     console.error("send-order-link: SMTP send error:", err);
+    const debugMessage = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
-      { error: "Failed to send emails. Please try again later." },
+      {
+        error: "Failed to send emails. Please try again later.",
+        ...(isDev && { debug: debugMessage }),
+      },
       { status: 502 },
     );
   }

@@ -226,9 +226,16 @@ export default function OrderLeadModal({ currency }: Props) {
       });
       const data = (await res.json().catch(() => ({}))) as {
         error?: string;
+        /** Set by the API in development to explain SMTP failures */
+        debug?: string;
       };
       if (!res.ok) {
-        setError(data.error ?? "Something went wrong. Please try again.");
+        const base = data.error ?? "Something went wrong. Please try again.";
+        setError(
+          data.debug
+            ? `${base} — ${data.debug}`
+            : base,
+        );
         return;
       }
       setSuccess({
