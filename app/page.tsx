@@ -400,16 +400,16 @@ export default function Home() {
 
             <div id="standard-plans" className="pricing-container active">
               {[
-                { name: "1 Month", price: "16.23 USD", period: "/mo" },
+                { name: "1 Month", price: "$16.23", period: "/mo" },
                 {
                   name: "3 Months",
-                  price: "23.36 USD",
+                  price: "$23.36",
                   period: "/3mo",
                   popular: true,
                   badge: "Best Value",
                 },
-                { name: "6 Months", price: "43.42 USD", period: "/6mo" },
-                { name: "12 Months", price: "59.30 USD", period: "/yr" },
+                { name: "6 Months", price: "$43.42", period: "/6mo" },
+                { name: "12 Months", price: "$59.30", period: "/yr" },
               ].map((plan, idx) => (
                 <div
                   key={idx}
@@ -472,16 +472,16 @@ export default function Home() {
 
             <div id="premium-plans" className="pricing-container">
               {[
-                { name: "1 Month Premium", price: "29.25 USD", period: "/mo" },
+                { name: "1 Month Premium", price: "$29.25", period: "/mo" },
                 {
                   name: "3 Months Premium",
-                  price: "40.48 USD",
+                  price: "$40.48",
                   period: "/3mo",
                   popular: true,
                   badge: "Top Choice",
                 },
-                { name: "6 Months Premium", price: "54.88 USD", period: "/6mo" },
-                { name: "12 Months Premium", price: "80.41 USD", period: "/yr" },
+                { name: "6 Months Premium", price: "$54.88", period: "/6mo" },
+                { name: "12 Months Premium", price: "$80.41", period: "/yr" },
               ].map((plan, idx) => (
                 <div
                   key={idx}
